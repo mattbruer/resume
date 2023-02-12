@@ -103,8 +103,8 @@ const Headshot = styled.div`
 
 const Intro = styled.div`
   height: 25vw;
-   background-color: gainsboro;
-  color: black; */
+  background-color: gainsboro;
+  color: black;
 
   /* border: 1px solid grey; */
 `;
