@@ -1,99 +1,71 @@
-import styled from 'styled-components';
-import MyCourses from './MyCourses';
-import MyEducation from './MyEducation';
-import { bio } from './bio';
-import MovingComponent from 'react-moving-text';
+import styled from "styled-components";
+import MyCourses from "./MyCourses";
+import MyEducation from "./MyEducation";
+import { bio } from "./bio";
+import MovingComponent from "react-moving-text";
 
 function App() {
   return (
     <Container>
       <Hello>
         <BusinessCard>
-          <MovingComponent
-            type="slideInFromBottom"
-            duration="1000ms"
-            delay="0s"
-            direction="normal"
-            timing="ease"
-            iteration="1"
-            fillMode="none"
+          <h1
+            style={{
+              paddingRight: "35px",
+              backgroundImage:
+                'url("https://i.pinimg.com/originals/9d/29/b9/9d29b94ab69bb63fda387109602cb85d.jpg")',
+              backgroundSize: "contain",
+              color: "transparent",
+              WebkitBackgroundClip: "text",
+              fontFamily: "Ms Madi",
+              fontSize: "24vw",
+            }}
           >
-            <h1
-              style={{
-                paddingRight: '35px',
-                backgroundImage:
-                  'url("https://i.pinimg.com/originals/9d/29/b9/9d29b94ab69bb63fda387109602cb85d.jpg")',
-                backgroundSize: 'contain',
-                color: 'transparent',
-
-                WebkitBackgroundClip: 'text',
-                fontFamily: 'Ms Madi',
-                fontSize: '24vw',
-              }}
-            >
-              Hello!
-            </h1>
-          </MovingComponent>
+            Hello!
+          </h1>
 
           <p
             style={{
-              marginTop: '-5vw',
-              marginBottom: '1vw',
-              fontSize: '6vw',
+              marginTop: "-5vw",
+              marginBottom: "1vw",
+              fontSize: "6vw",
             }}
           >
             Matt Bruer
           </p>
-          <p style={{ fontSize: '3vw' }}>
+          <p style={{ fontSize: "3vw" }}>
             Software Engineer | JavaScript Developer | Web Developer | Full
             Stack Developer
           </p>
         </BusinessCard>
 
         <Headshot>
-          <img
-            style={{
-              border: '0.3vw dashed black',
-              borderRadius: '100vw',
-              boxShadow: '0px 0px 5px black',
-            }}
-            width={'100%'}
-            src="me.jpg"
-            alt="headshot"
-          />
+          <img width={"100%"} src="me.jpg" alt="headshot" />
         </Headshot>
       </Hello>
-      <div
-        style={{
-          display: 'flex',
-          alignItems: 'center',
-          backgroundColor: 'white',
-          justifyContent: 'space-evenly',
-          boxShadow: '0px 0px 3vw red',
-        }}
-      >
+      <TechStack>
         <img
           alt=""
           width="15%"
-          style={{ marginLeft: '2vw', marginRight: '1vw' }}
+          style={{ marginLeft: "2vw", marginRight: "1vw" }}
           src="react.png"
         />
         <img
           width="15%"
-          style={{ marginRight: '2vw' }}
+          style={{ marginRight: "2vw" }}
           src="https://upload.wikimedia.org/wikipedia/commons/3/30/Redux_Logo.png"
           alt=""
         />
 
         <img
-          width="15%"
+          width="13%"
           src="https://upload.wikimedia.org/wikipedia/commons/d/d9/Node.js_logo.svg"
           alt=""
         />
         <img width="15%" src="postgres.png" alt="" />
 
         <img
-          width="15%"
+          width="20%"
           src="https://1000logos.net/wp-content/uploads/2020/08/MongoDB-Logo.jpg"
           alt=""
         />
@@ -102,22 +74,37 @@ function App() {
           src="https://devstickers.com/assets/img/pro/rd5f.png"
           alt=""
         />
-      </div>
-      <Intro
-        style={{
-          padding: '5vw',
-          fontSize: '2vw',
-          textAlign: 'center',
-          borderTop: '1px solid grey',
-        }}
-      >
-        <h2>{bio}</h2>
+      </TechStack>
+      <Intro>
+        <h3 style={{ marginBottom: "5vw" }}>{bio}</h3>
+        <MovingComponent
+          type="bounce"
+          duration="1000ms"
+          delay="7s"
+          direction="normal"
+          timing="ease"
+          iteration="2"
+          fillMode="none"
+        >
+          <h2 style={{ fontSize: "6vw" }}>I'm so glad you're here!</h2>
+        </MovingComponent>
       </Intro>
-      <h2 style={{ textAlign: 'center' }}>My Education</h2>
-      <img width="60%" src="FSACert.jpg" alt="fsa cert" />
-      <MyEducation />
-      <h2 style={{ textAlign: 'center' }}>Coding Courses</h2>
+      <hr />
+
+      <h2 style={{ textAlign: "center" }}>Let's start with coding:</h2>
+      <p style={{ textAlign: "center" }}>
+        I self-study with Udemy courses that are usually 40+ hours long for deep
+        dives into new tech I want to learn.
+      </p>
       <MyCourses />
+      <img
+        style={{ margin: "10%" }}
+        width="80%"
+        src="FSACert.jpg"
+        alt="fsa cert"
+      />
+      <h2 style={{ textAlign: "center" }}>My Education</h2>
+      <MyEducation />
     </Container>
   );
 }
@@ -129,7 +116,7 @@ const Container = styled.div`
   flex-direction: column;
   background-color: #09111a;
   color: whitesmoke;
-  font-family: 'Noto Serif JP', serif;
+  font-family: "Noto Serif JP", serif;
 `;
 
 const Hello = styled.div`
@@ -154,17 +141,27 @@ const BusinessCard = styled.div`
 const Headshot = styled.div`
   width: 50%;
   height: 50%;
-  border: 0.6vw dashed black;
+  border: 1px solid black;
   border-radius: 100vw;
   display: flex;
   overflow: hidden;
-  box-shadow: 0px 0px 20px black;
+  margin-right: 1vw;
+  box-shadow: 0px 0px 1vw #0c6f76;
 `;
 
 const Intro = styled.div`
-  height: 25vw;
-  /*   */
-  padding: 4px;
+  height: 100%;
+  padding: 5vw;
+  font-size: 2vw;
+  text-align: center;
+  margin-bottom: 3px;
+`;
 
-  /* border: 1px solid grey; */
+const TechStack = styled.div`
+  display: flex;
+  align-items: center;
+  background-color: white;
+  justify-content: space-evenly;
+  box-shadow: 0px 0px 3vw #0c6f76;
+  /* border-radius: 100px; */
 `;
