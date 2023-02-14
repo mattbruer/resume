@@ -1,8 +1,11 @@
 import styled from 'styled-components';
 import MyCourses from './MyCourses';
 import MyEducation from './MyEducation';
+import MyMusic from './MyMusic';
+import MyArt from './MyArt';
 import { bio } from './bio';
 import MovingComponent from 'react-moving-text';
+import MyPhotography from './MyPhotography';
 
 function App() {
   return (
@@ -80,7 +83,7 @@ function App() {
         <MovingComponent
           type="bounce"
           duration="1000ms"
-          delay="7s"
+          delay="12s"
           direction="normal"
           timing="ease"
           iteration="2"
@@ -94,31 +97,55 @@ function App() {
         <h2 style={{ textAlign: 'center', marginBottom: '2vw' }}>
           Let's start with coding:
         </h2>
+        <p style={{ textAlign: 'center', padding: '5%' }}>
+          In December 2022, I completed a 17-week full time immersive software
+          engineering bootcamp. 40+ hours/week focusing on full stack Javascript
+          web development. Fullstack Academy is a highly esteemed bootcamp based
+          in NYC. Agile.
+        </p>
+        <img
+          style={{
+            marginLeft: '5%',
+            marginBottom: '5%',
+            boxShadow: '0px 0px 3vw black',
+          }}
+          width="90%"
+          src="FSACert.jpg"
+          alt="fsa cert"
+        />
         <p style={{ textAlign: 'center' }}>
-          I self-study with Udemy courses for deep dives into new tech I want to
-          learn. These courses are often 40+ hours long and build large and
-          complete full stack projects.
+          For 5 years prior to bootcamp, I self-studied with Udemy courses for
+          deep dives into new tech I want to learn. These comprehensive courses
+          are often 40+ hours long and build large and complete full stack
+          projects. While my muscle memory is best with Single Page Apps and
+          React, I have built a few large SSR projects with NextJS and a few
+          mobile projects with React Native. I haven't yet embraced using
+          Typescript in my personal projects, but I have completed a few
+          in-depth TS courses and should easily be able to grow quickly into a
+          role that uses it. I have spent quite a bit of time learning AWS, and
+          would love a role that includes that...but be gentle, AWS has a steep
+          learning curve!
         </p>
         <p style={{ textAlign: 'center' }}>(scroll horizontally)</p>
       </div>
 
       <MyCourses />
-      <p style={{ textAlign: 'center', padding: '5%' }}>
-        In December 2022, I completed a 17-week full time immersive software
-        engineering bootcamp. 40+ hours/week focusing on full stack Javascript.
-      </p>
-      <img
-        style={{
-          marginLeft: '5%',
-          marginBottom: '5%',
-          boxShadow: '0px 0px 3vw black',
-        }}
-        width="90%"
-        src="FSACert.jpg"
-        alt="fsa cert"
-      />
+
       <h2 style={{ textAlign: 'center' }}>My Education</h2>
+      <p style={{ textAlign: 'center', margin: '5%' }}>
+        While not in a related field to software, I have a degree in Psychology
+        and went to one of the best music schools in the world where I studied
+        composition and production...and BANJO!
+      </p>
       <MyEducation />
+      <h2 style={{ textAlign: 'center' }}>My Life Before Code</h2>
+      <p style={{ textAlign: 'center', margin: '5%' }}>
+        So, Matt...what's your employment history?{' '}
+      </p>
+      <MyMusic />
+      <MyPhotography />
+      <MyArt />
+      <h2>Contact/Github/LinkedIn</h2>
     </Container>
   );
 }
