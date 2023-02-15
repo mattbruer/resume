@@ -13,15 +13,17 @@ const MyMusic = () => {
         }}
       >
         <div style={styles.photoBox}>
-          <video
-            src="https://thrutheyears.s3.us-east-2.amazonaws.com/thrutheyears/SpanishPipedream.MP4"
-            controls
-            type="video/mp4"
+          <iframe
             width={560 / 1.75}
             height={315 / 1.75}
-            poster="https://thrutheyears.s3.us-east-2.amazonaws.com/thrutheyears/thumb.jpg"
-          />
+            src="https://www.youtube.com/embed/F-qof1tjTcw"
+            title="YouTube video player"
+            frameBorder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+          ></iframe>
         </div>
+
         <div
           style={{ ...styles.photoBox, color: 'white', textAlign: 'center' }}
         >
@@ -37,17 +39,15 @@ const MyMusic = () => {
           ></iframe>
         </div>
         <div style={styles.photoBox}>
-          <iframe
+          <video
+            src="https://thrutheyears.s3.us-east-2.amazonaws.com/thrutheyears/SpanishPipedream.MP4"
+            controls
+            type="video/mp4"
             width={560 / 1.75}
             height={315 / 1.75}
-            src="https://www.youtube.com/embed/F-qof1tjTcw"
-            title="YouTube video player"
-            frameBorder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowFullScreen
-          ></iframe>
+            poster="https://thrutheyears.s3.us-east-2.amazonaws.com/thrutheyears/thumb.jpg"
+          />
         </div>
-
         <div style={styles.photoBox}>
           <iframe
             width={560 / 1.75}
@@ -213,7 +213,7 @@ const styles = {
   photoBox: {
     borderRadius: '20px',
     border: '1px solid black',
-    boxShadow: '-10px 15px 5px black',
+    boxShadow: '0px 0px 5px black',
     display: 'flex',
     height: '225px',
     margin: 30,

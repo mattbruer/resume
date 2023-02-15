@@ -5,7 +5,6 @@ import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 const MyCourses = () => {
   return (
     <div style={{ display: 'flex', alignItems: 'center' }}>
-      <ChevronLeftIcon fontSize="large" />
       <div style={styles.container}>
         {courses.map((c, i) => {
           return (
@@ -20,7 +19,6 @@ const MyCourses = () => {
           );
         })}
       </div>
-      <ChevronRightIcon fontSize="large" />
     </div>
   );
 };
@@ -55,8 +53,8 @@ const styles = {
   container: {
     display: 'flex',
     overflowX: 'scroll',
-    borderRadius: '15px',
 
+    boxShadow: '0px 0px 15px #0c6f76',
     backgroundColor: '#123',
   },
   photoBox: {
@@ -66,11 +64,5 @@ const styles = {
     display: 'flex',
     height: '225px',
     margin: 30,
-  },
-  arrows: {
-    height: '225px',
-    display: 'flex',
-    position: 'fixed',
-    alignItems: 'center',
   },
 };

@@ -11,7 +11,7 @@ const MyEducation = () => {
           style={{
             borderRadius: '20px',
             border: '1px solid black',
-            boxShadow: '-10px 15px 5px black',
+            boxShadow: '0px 0px 5px black',
             display: 'flex',
             height: '225px',
             margin: 30,

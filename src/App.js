@@ -3,7 +3,7 @@ import MyCourses from './MyCourses';
 import MyEducation from './MyEducation';
 import MyMusic from './MyMusic';
 import MyArt from './MyArt';
-import { bio } from './bio';
+
 import MovingComponent from 'react-moving-text';
 import MyPhotography from './MyPhotography';
 
@@ -27,19 +27,19 @@ function App() {
             Hello!
           </h1>
 
-          <p
+          <h2
             style={{
               marginTop: '-5vw',
               marginBottom: '1vw',
-              fontSize: '6vw',
+              fontSize: '8vw',
             }}
           >
             Matt Bruer
-          </p>
-          <p style={{ fontSize: '3vw' }}>
+          </h2>
+          <h2 style={{ fontSize: '3vw' }}>
             Software Engineer | JavaScript Developer | Web Developer | Full
             Stack Developer
-          </p>
+          </h2>
         </BusinessCard>
 
         <Headshot>
@@ -79,73 +79,172 @@ function App() {
         />
       </TechStack>
       <Intro>
-        <h3 style={{ marginBottom: '5vw' }}>{bio}</h3>
-        <MovingComponent
-          type="bounce"
-          duration="1000ms"
-          delay="12s"
-          direction="normal"
-          timing="ease"
-          iteration="2"
-          fillMode="none"
+        <h2 style={{ marginBottom: '5vw', fontSize: '4vw' }}>
+          Gathering more about me as a job candidate?{' '}
+        </h2>
+        <div
+          style={{
+            display: 'flex',
+            justifyContent: 'center',
+            marginBottom: '4vw',
+          }}
         >
-          <h2 style={{ fontSize: '6vw' }}>I'm so glad you're here!</h2>
-        </MovingComponent>
+          <MovingComponent
+            type="bounce"
+            duration="1000ms"
+            delay="10s"
+            direction="normal"
+            timing="ease"
+            iteration="2"
+            fillMode="none"
+          >
+            <h2
+              style={{
+                fontSize: '7vw',
+              }}
+            >
+              I'm so glad you're here!
+            </h2>
+          </MovingComponent>
+        </div>
       </Intro>
-      <hr />
+      <img
+        alt="page divider"
+        src="divider.png"
+        style={{ mixBlendMode: 'lighten', width: '80%', marginLeft: '10%' }}
+      />
       <div style={{ padding: '5%' }}>
-        <h2 style={{ textAlign: 'center', marginBottom: '2vw' }}>
+        <h2 style={{ textAlign: 'center', fontSize: '5vw' }}>
           Let's start with coding:
         </h2>
-        <p style={{ textAlign: 'center', padding: '5%' }}>
-          In December 2022, I completed a 17-week full time immersive software
-          engineering bootcamp. 40+ hours/week focusing on full stack Javascript
-          web development. Fullstack Academy is a highly esteemed bootcamp based
-          in NYC. Agile.
+        <p
+          style={{
+            textAlign: 'center',
+            padding: '5% 0 5% 0',
+            fontSize: '3.5vw',
+          }}
+        >
+          In December 2022, I completed a 17-week immersive software engineering
+          bootcamp. 40+ hours/week of full stack Javascript.
         </p>
         <img
           style={{
-            marginLeft: '5%',
-            marginBottom: '5%',
-            boxShadow: '0px 0px 3vw black',
+            border: '.5vw groove white',
+            boxShadow: '0px 0px 2vw #0c6f76',
           }}
-          width="90%"
+          width="100%"
           src="FSACert.jpg"
           alt="fsa cert"
         />
-        <p style={{ textAlign: 'center' }}>
-          For 5 years prior to bootcamp, I self-studied with Udemy courses for
-          deep dives into new tech I want to learn. These comprehensive courses
-          are often 40+ hours long and build large and complete full stack
-          projects. While my muscle memory is best with Single Page Apps and
-          React, I have built a few large SSR projects with NextJS and a few
-          mobile projects with React Native. I haven't yet embraced using
-          Typescript in my personal projects, but I have completed a few
-          in-depth TS courses and should easily be able to grow quickly into a
-          role that uses it. I have spent quite a bit of time learning AWS, and
-          would love a role that includes that...but be gentle, AWS has a steep
-          learning curve!
+        <p
+          style={{
+            textAlign: 'center',
+            padding: '5% 0 5% 0',
+            fontSize: '3.5vw',
+          }}
+        >
+          I stay on top of my stack with deep-dive Udemy courses on React for
+          SPAs, NextJS for SSR, and React Native for mobile. I've completed
+          in-depth Typescript courses, and I'm learning AWS.
         </p>
-        <p style={{ textAlign: 'center' }}>(scroll horizontally)</p>
+        {/* <p style={{ textAlign: 'center' }}>(scroll horizontally)</p> */}
       </div>
 
       <MyCourses />
 
-      <h2 style={{ textAlign: 'center' }}>My Education</h2>
-      <p style={{ textAlign: 'center', margin: '5%' }}>
+      <h2 style={{ textAlign: 'center', fontSize: '6vw' }}>My Education</h2>
+      <p
+        style={{
+          textAlign: 'center',
+          padding: '5%',
+          fontSize: '3.5vw',
+        }}
+      >
         While not in a related field to software, I have a degree in Psychology
-        and went to one of the best music schools in the world where I studied
+        and went to one of the best music schools on the planet where I studied
         composition and production...and BANJO!
       </p>
       <MyEducation />
-      <h2 style={{ textAlign: 'center' }}>My Life Before Code</h2>
-      <p style={{ textAlign: 'center', margin: '5%' }}>
-        So, Matt...what's your employment history?{' '}
+      <h2 style={{ textAlign: 'center', fontSize: '6vw', marginBottom: '2vw' }}>
+        My Life Before Code
+      </h2>
+      <p
+        style={{
+          textAlign: 'center',
+          marginBottom: '2vw',
+          fontSize: '3.5vw',
+        }}
+      >
+        (So, Matt...what's your employment history?)
       </p>
+      <p
+        style={{
+          textAlign: 'center',
+          padding: '5%',
+          fontSize: '3.5vw',
+        }}
+      >
+        My career has been as a freelance creative. From 2008-2015, I played
+        banjo in a traditional bluegrass band in Los Angeles. In 2015, I moved
+        home to Missouri and worked as a real estate and wedding photographer,
+        shooting ~2,000 homes and ~50 weddings.
+      </p>
+      <h2 style={{ textAlign: 'center' }}>Music</h2>
       <MyMusic />
       <MyPhotography />
       <MyArt />
-      <h2>Contact/Github/LinkedIn</h2>
+
+      <div
+        style={{
+          display: 'flex',
+          margin: '5%',
+          justifyContent: 'space-around',
+          textAlign: 'center',
+        }}
+      >
+        <div
+          style={{
+            border: '1px solid black',
+            borderRadius: '200px',
+            width: '20vw',
+            boxShadow: '0px 0px 10px #0c6f76',
+            overflow: 'hidden',
+          }}
+        >
+          <a
+            href="https://github.com/mattbruer"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <img alt="github logo" width="100%" src="github.png" />
+          </a>
+        </div>
+        <div
+          style={{
+            border: '1px solid white',
+
+            height: '100%',
+            width: '20vw',
+            borderRadius: '20px',
+            backgroundColor: 'white',
+            boxShadow: '0px 0px 10px #0c6f76',
+            overflow: 'hidden',
+          }}
+        >
+          <a
+            href="https://www.linkedin.com/in/matt-bruer/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <img
+              style={{ padding: '.5vw .5vw 0 .5vw' }}
+              alt="linkedIn logo"
+              width="100%"
+              src="linkedIn.png"
+            />
+          </a>
+        </div>
+      </div>
     </Container>
   );
 }
@@ -155,7 +254,7 @@ export default App;
 const Container = styled.div`
   display: flex;
   flex-direction: column;
-  background-color: #09111a;
+  background-color: #0b1218;
   color: whitesmoke;
   font-family: 'Noto Serif JP', serif;
 `;
@@ -191,7 +290,6 @@ const Headshot = styled.div`
 `;
 
 const Intro = styled.div`
-  height: 100%;
   padding: 5vw;
   font-size: 2vw;
   text-align: center;
