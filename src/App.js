@@ -160,9 +160,8 @@ function App() {
           fontSize: '3.5vw',
         }}
       >
-        While not in a related field to software, I have a degree in Psychology
-        and went to one of the best music schools on the planet where I studied
-        composition and production...and BANJO!
+        I have a degree in Psychology and went to one of the best music schools
+        on the planet where I studied composition and production...and BANJO!
       </p>
       <MyEducation />
       <h2 style={{ textAlign: 'center', fontSize: '6vw', marginBottom: '2vw' }}>
